@@ -10,8 +10,8 @@ namespace MuMech
     {
         public string status = "";
 
-        public double approachSpeedMult = 1; // Approach speed will be approachSpeedMult * available thrust/mass on each axis.
-
+        public double approachSpeedMult = 6; // Approach speed will be approachSpeedMult * available thrust/mass on each axis.
+                                            
         public double Kp = 0.2, Ki = 0, Kd = 0.02;
 
         public PIDController lateralPID;
