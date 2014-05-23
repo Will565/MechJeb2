@@ -368,7 +368,8 @@ namespace MuMech
             try
             {
                 string[] units = { "y", "d", "h", "m", "s" };
-                long[] intervals = { 365 * 24 * 3600, 24 * 3600, 3600, 60, 1 };
+                // Changed 24 to 6 to match Kerbin 6 hour days
+                long[] intervals = { 365 * 6 * 3600, 6 * 3600, 3600, 60, 1 };
 
                 if (seconds < 0)
                 {
@@ -404,7 +405,8 @@ namespace MuMech
         public static bool TryParseDHMS(string s, out double seconds)
         {
             string[] units = { "y", "d", "h", "m", "s" };
-            int[] intervals = { 365 * 24 * 3600, 24 * 3600, 3600, 60, 1 };
+            // Changed 24 to 6 to match Kerbin 6 hour days
+            int[] intervals = { 365 * 6 * 3600, 6 * 3600, 3600, 60, 1 };
 
             s = s.Trim(' ');
             bool minus = (s.StartsWith("-"));
